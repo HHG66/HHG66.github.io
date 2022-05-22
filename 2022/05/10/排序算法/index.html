@@ -11,15 +11,15 @@
             韩的博客
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="排序算法冒泡排序：是一种最简单直观的排序算法。相邻两两比较，直到排序完成。 所以如何将这种算法实际写出来，需要明确几点，从什么地方两两比较，比较的次数如何确定。 下面是根据冒泡排序的算法思路和提供标准程序自己写的，可以看到的下面的冒泡排序有几点是不对的，第一个虽然我们可以实现排序，但是我们比较次数是固定的，没有考虑到每一次排序完成后，意味着下一次两两比较的次数都会减少一次，这样对于大量的数据排序能">
+        <meta name="description" content="排序算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法">
 <meta property="og:url" content="http://example.com/2022/05/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="排序算法冒泡排序：是一种最简单直观的排序算法。相邻两两比较，直到排序完成。 所以如何将这种算法实际写出来，需要明确几点，从什么地方两两比较，比较的次数如何确定。 下面是根据冒泡排序的算法思路和提供标准程序自己写的，可以看到的下面的冒泡排序有几点是不对的，第一个虽然我们可以实现排序，但是我们比较次数是固定的，没有考虑到每一次排序完成后，意味着下一次两两比较的次数都会减少一次，这样对于大量的数据排序能">
+<meta property="og:description" content="排序算法">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-05-10T00:39:10.000Z">
-<meta property="article:modified_time" content="2022-05-16T13:51:46.822Z">
+<meta property="article:modified_time" content="2022-05-22T03:46:06.731Z">
 <meta property="article:author" content="Han Hongguang">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="算法">
@@ -181,7 +181,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>冒泡排序：是一种最简单直观的排序算法。相邻两两比较，直到排序完成。</p>
+        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><span id="more"></span>
+
+<p>冒泡排序：是一种最简单直观的排序算法。相邻两两比较，直到排序完成。</p>
 <p>所以如何将这种算法实际写出来，需要明确几点，从什么地方两两比较，比较的次数如何确定。</p>
 <p>下面是根据冒泡排序的算法思路和提供标准程序自己写的，可以看到的下面的冒泡排序有几点是不对的，第一个虽然我们可以实现排序，但是我们比较次数是固定的，没有考虑到每一次排序完成后，意味着下一次两两比较的次数都会减少一次，这样对于大量的数据排序能够给减少排序时间和负担。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> arrLength=arr.length</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>,i&lt;arrLength,i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>,j&lt;arrLength,j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">				<span class="keyword">let</span> temp=arr[j]</span><br><span class="line">				arr[j]=arr[j+<span class="number">1</span>]</span><br><span class="line">				arr[j+<span class="number">1</span>]=temp</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -453,6 +455,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">UI</a>
               </li>
              
@@ -462,10 +468,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">图床</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -497,11 +499,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图表</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">图表</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -202,6 +202,86 @@
 
 
   
+    <article id="post-mac启动mongoose数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/20/mac%E5%90%AF%E5%8A%A8mongoose%E6%95%B0%E6%8D%AE%E5%BA%93/">mac中mongoose使用</a>
+    </h1>
+  
+
+        
+        <a href="/2022/05/20/mac%E5%90%AF%E5%8A%A8mongoose%E6%95%B0%E6%8D%AE%E5%BA%93/" class="archive-article-date">
+  	<time datetime="2022-05-20T03:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-20</time>
+	  
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mac启动mongoose数据库"><a href="#mac启动mongoose数据库" class="headerlink" title="mac启动mongoose数据库"></a>mac启动mongoose数据库</h1><p>使用终端工具进入mongoDB安装路径，<code>/usr/local/mongodb</code></p>
+<p>输入下面命令，指定数据路径、日志路径，fork指定后台运行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./bin/mongod --dbpath ./data --logpath ./mongo.log --fork;</span><br></pre></td></tr></table></figure>
+
+<p>不推介开机自动起动服务，使用的时候启动更好。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/05/20/mac%E5%90%AF%E5%8A%A8mongoose%E6%95%B0%E6%8D%AE%E5%BA%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-React基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -224,62 +304,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="React基础"><a href="#React基础" class="headerlink" title="React基础"></a>React基础</h1><p>用于构建用户界面的js库，另一种解释是将数据渲染成html视图的开源js库。</p>
-<p>js开发的痛点：</p>
-<p>1、为什么学习：简化dom操作，提高操作效率</p>
-<p>2、大量的重新渲染</p>
-<p>3、复用率低</p>
-<p>react的特点：</p>
-<p>1、组件化开发，提高复用率，声明式编程</p>
-<p>2、能够开发移动端开发</p>
-<p>3、虚拟dom+diffing算法、减少大量dom操作</p>
-<h2 id="jsx"><a href="#jsx" class="headerlink" title="jsx"></a>jsx</h2><p>使用jsx来编写react。</p>
-<h3 id="helloReact"><a href="#helloReact" class="headerlink" title="helloReact"></a>helloReact</h3><p>创建一个html，引入核心库，dom库，以及babel。</p>
-<p>新建一个script标签，指定的babel翻译，指定是必须的</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/babel&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>1、创建一个虚拟dom</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const VDOM = &lt;h1&gt;hello React&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
-
-<p>2、渲染虚拟dom,render是一个函数，第一个参数接收接收虚拟dom，第二个参数接收一个容器dom（真实的dom元素）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render()</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>重复调用render()，不可以追加渲染，最后一次调用render会覆盖之前渲染的结果。</p>
-</blockquote>
-<h3 id="两种创建虚拟dom的方式"><a href="#两种创建虚拟dom的方式" class="headerlink" title="两种创建虚拟dom的方式"></a>两种创建虚拟dom的方式</h3><p>js原生创建，或者jsx创建。</p>
-<p>实际上原生创建是很复杂的，所以js方式创建很少用。不做笔记，事实上，jsx方式创建dom其实是会翻译成原生js的创建。</p>
-<p>jsx是原生创建js的语法糖。</p>
-<h3 id="虚拟dom和真实dom"><a href="#虚拟dom和真实dom" class="headerlink" title="虚拟dom和真实dom"></a>虚拟dom和真实dom</h3><p>虚拟dom是什么：</p>
-<h2 id="jsx语法规则"><a href="#jsx语法规则" class="headerlink" title="jsx语法规则"></a>jsx语法规则</h2><p>jsx全称：</p>
-<p>xml是什么：</p>
-<h3 id="规则："><a href="#规则：" class="headerlink" title="规则："></a>规则：</h3><p>jsx和实际dom写法的区别：不包含引号。</p>
-<p>包含<strong>表达式</strong>写法：</p>
-<blockquote>
-<p>区分什么是js代码和什么是js表达式</p>
-</blockquote>
-<p>类名如何写：</p>
-<p>内联样式写法：</p>
-<p>根元素规则：</p>
-<p>标签规则：</p>
-<p>标签首字母：大小写的区别</p>
-<h3 id="组件与模块"><a href="#组件与模块" class="headerlink" title="组件与模块"></a>组件与模块</h3><p>什么是组件：</p>
-<p>什么是模块：</p>
-<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>函数式组件：</p>
-<blockquote>
-<p>类式组件开发的注意点</p>
-</blockquote>
-<p>分析执行过程：</p>
-<p>类式组件：</p>
-<blockquote>
-<p>类式组件开发的注意点</p>
-</blockquote>
-<p>分析执行过程：</p>
-<blockquote>
-<p>区别函数式和类式组件区别</p>
-</blockquote>
-<h3 id="简单组件和复杂组件"><a href="#简单组件和复杂组件" class="headerlink" title="简单组件和复杂组件"></a>简单组件和复杂组件</h3><h3 id="组件属性"><a href="#组件属性" class="headerlink" title="组件属性"></a>组件属性</h3><p><strong>组件状态：</strong>state</p>
-
+        <h1 id="React基础"><a href="#React基础" class="headerlink" title="React基础"></a>React基础</h1>
+        
       
 
       
@@ -358,14 +384,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>冒泡排序：是一种最简单直观的排序算法。相邻两两比较，直到排序完成。</p>
-<p>所以如何将这种算法实际写出来，需要明确几点，从什么地方两两比较，比较的次数如何确定。</p>
-<p>下面是根据冒泡排序的算法思路和提供标准程序自己写的，可以看到的下面的冒泡排序有几点是不对的，第一个虽然我们可以实现排序，但是我们比较次数是固定的，没有考虑到每一次排序完成后，意味着下一次两两比较的次数都会减少一次，这样对于大量的数据排序能够给减少排序时间和负担。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> arrLength=arr.length</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>,i&lt;arrLength,i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>,j&lt;arrLength,j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">				<span class="keyword">let</span> temp=arr[j]</span><br><span class="line">				arr[j]=arr[j+<span class="number">1</span>]</span><br><span class="line">				arr[j+<span class="number">1</span>]=temp</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>标准冒泡算法：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> arrLength = arr.length</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arrLength - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; arrLength - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = arr[j]</span><br><span class="line">        arr[j] = arr[j + <span class="number">1</span>]</span><br><span class="line">        arr[j + <span class="number">1</span>] = temp</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1>
+        
       
 
       
@@ -489,112 +509,6 @@
 
 
   
-    <article id="post-mac启动mongoose数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>mac启动mongoose数据库</p>
-<p>使用终端工具进入mongoDB安装路径，<code>/usr/local/mongodb</code></p>
-<p>输入下面命令，指定数据路径、日志路径，fork指定后台运行。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./bin/mongod --dbpath ./data --logpath ./mongo.log --fork;</span><br></pre></td></tr></table></figure>
-
-<p>不推介开机自动起动服务，使用的时候启动更好。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/05/03/mac%E5%90%AF%E5%8A%A8mongoose%E6%95%B0%E6%8D%AE%E5%BA%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-nginx相关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="配置正确，访问报403，"><a href="#配置正确，访问报403，" class="headerlink" title="配置正确，访问报403，"></a>配置正确，访问报403，</h1><p>nginx配置正确，访问报403错误，原因是用户不统一导致。解决方法：</p>
-<p>将配置文件中<code> #user  nobody;</code>修改为<code> user  root wheel;</code></p>
-<p><img src="https://raw.githubusercontent.com/HHG66/picgo/master/img/%E6%B5%8B%E8%AF%952.png" alt="image-20220508223704034"></p>
-<p>mac查看进程</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br><span class="line">ps -ef | grep &lt;进程名&gt;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/04/30/nginx%E7%9B%B8%E5%85%B3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-TypeScipt学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -617,19 +531,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="ts学习"><a href="#ts学习" class="headerlink" title="ts学习"></a>ts学习</h1><p>tsc是ts 的编译命令，为了方便，ts提供了监听并且自动编译的命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tsc 文件名 —watch</span><br><span class="line">//简称</span><br><span class="line">tsc 文件名 -w</span><br></pre></td></tr></table></figure>
-
-<h2 id="初始化一个ts配置文件"><a href="#初始化一个ts配置文件" class="headerlink" title="初始化一个ts配置文件"></a>初始化一个ts配置文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc --init </span><br></pre></td></tr></table></figure>
-
-<p><code>tsc -w</code> 监听当前目录下的 tsconfig配置文件。</p>
-<h2 id="类型声明"><a href="#类型声明" class="headerlink" title="类型声明"></a>类型声明</h2><p>每一个变量都会初始化一个数据类型，当我们使用的时候只能按照初始化的数据类型使用，不然ts编译不通过。</p>
-<h2 id="类型推断"><a href="#类型推断" class="headerlink" title="类型推断"></a>类型推断</h2><p>当一个变量声明之后没有指定数据类型，而是直接使用，那么ts就认为变量的数据类型是使用值得数据类型。</p>
-<h2 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h2><h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="对象类型"><a href="#对象类型" class="headerlink" title="对象类型"></a>对象类型</h3><p>非原始类型,但是也属于ts的基本类型。</p>
-<h3 id="组合类型、"><a href="#组合类型、" class="headerlink" title="组合类型、"></a>组合类型、</h3><p>不是一个特定类型，而是几种基本类型的组合。</p>
-<h3 id="任意值"><a href="#任意值" class="headerlink" title="任意值"></a>任意值</h3><p>any</p>
-<h3 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h3><p>void</p>
-<h3 id="null和undefined"><a href="#null和undefined" class="headerlink" title="null和undefined"></a>null和undefined</h3><h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2>
+        <h1 id="ts学习"><a href="#ts学习" class="headerlink" title="ts学习"></a>ts学习</h1><p>javascript的超集</p>
+        
       
 
       
@@ -693,9 +596,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Ec</p>
-<p>c</p>
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>ES6是js规范，指2015年制定的标准。个人理解，目前说的ES6人们一般指代2015年之后指定的所有标准。</p>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>ES6是js规范，指2015年制定的标准。个人理解，目前说的ES6人们一般指代2015年之后指定的所有标准。</p>
 
       
 
@@ -704,6 +605,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -760,37 +672,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>腾讯云服务器中的usr–local–MinIo文件夹下面下载安装了MinIo，输入下面的命令可以启动服务，主要这里有坑，不指定后面的端口是没办法访问的项目，当然ip也需要指定。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./minio server /minio/data --address=0.0.0.0:9000 --console-address &quot;0.0.0.0:9001&quot;</span><br></pre></td></tr></table></figure>
-
-<p>默认初始化账号密码：minioadmin</p>
-<p>查看端口任务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -nap|grep 7779</span><br><span class="line">//或者</span><br><span class="line">lsof -i:9000</span><br></pre></td></tr></table></figure>
-
-<p>查看服务指定服务名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> ps -ef|grep &lt;服务名&gt;</span><br><span class="line">ps -ef|grep minio  </span><br></pre></td></tr></table></figure>
-
-<p>指定日志和ip，以及端口启动：</p>
-<blockquote>
-<p>注意，腾讯云数据挂载点和minio安装路径不在同一路径</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//一个示例</span><br><span class="line">nohup ./minio server /minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br><span class="line">//实际使用</span><br><span class="line">nohup ./minio server /Data/Minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br></pre></td></tr></table></figure>
-
-<p>如何启动成功，会在新的一行中显示启动的端口。</p>
-<p>访问文件，通过<code>IP:9000/桶的名称/文件名称</code>，例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://49.234.54.90:9000/han/%E9%87%91%E8%9E%8D%E5%AD%A6.png</span><br></pre></td></tr></table></figure>
-
-<p>单节点多磁盘启动：同时我们指定ur–local-MinIO 下面的data1，data2，为多个磁盘。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MINIO_ACCESS_KEY=$&#123;ACCESS_KEY&#125; MINIO_SECRET_KEY=$&#123;SECRET_KEY&#125; nohup $&#123;MINIO_HOME&#125;/minio server --address &quot;$&#123;MINIO_HOST&#125;:$&#123;MINIO_PORT&#125;&quot; /opt/min-data1 /opt/min-data2 /opt/min-data3 /opt/min-data4 &gt; $&#123;MINIO_LOGFILE&#125; 2&gt;&amp;1 &amp;</span><br><span class="line"></span><br><span class="line">nohup ./minio server ./minio/data1 ./minio/data2 ./minio/data3 ./minio/data4 --address &quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;   &gt; ./minlog/minio.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意，因为没有多磁盘环境，上面命令不一定能正常启动。</p>
-</blockquote>
-<blockquote>
-<p>注意：腾讯云服务器硬盘初始化挂载成功了但是没有正常开始使用，找客服重新挂载了，但是导致之前的Minio数据在系统盘中，而且后续存储大小不够需要重新将数据目录指定为挂载硬盘中。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
+        <h1 id="MinIo搭建私有对象存储"><a href="#MinIo搭建私有对象存储" class="headerlink" title="MinIo搭建私有对象存储"></a>MinIo搭建私有对象存储</h1>
+        
       
 
       
@@ -798,6 +681,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -854,59 +748,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h3><p>命令行工具本身不重要但是很多命令是很重要的。</p>
-<p>dir：列出当前目录下所有文件。</p>
-<p>cd：切换用户当前工作目录</p>
-<p>环境变量： 操作系统中用来指定操作系统运行环境的一些参数，或者是提供给需要操作设备而不同设备路径不同，预约的一种操作环境机制。例如我们想在某个路径的cmd中打开不在这个文件目录的文件，正常是打不开的，配置文件目录到环境变量就可以正常打开了。</p>
-<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p>进程：程序运行的必备环境。</p>
-<p>线程：计算机中最小计算单位，线程负责进程中程序。</p>
-<p>单线程、多线程</p>
-<p>Js是单线程</p>
-<p>Nodejs是一个能够在服务器端运行js的开放源代码，跨平台js运行环境。</p>
-<h3 id="ES标准的缺陷"><a href="#ES标准的缺陷" class="headerlink" title="ES标准的缺陷"></a>ES标准的缺陷</h3><p>ES没有模块化系统，但是有模块化。</p>
-<p>标准库比较少</p>
-<p>缺乏管理系统</p>
-<p>为了解决上述的缺陷，提出了CommonJs规范。</p>
-<p>这样在node里面不在使用es的方式引入模块，而是使用require函数来执行,一般我们把这种的方式称为commonjs模块。require引入会返回一个对象，这个对象存储着模块的变量和方法等。</p>
-<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>node中分两种模块，一种是核心模块，一种是文件模块，核心模块是node本身提供的，文件模块自己自定义的。</p>
-<p>node中存在global对象。 </p>
-<p>  模块是一个函数，所以模块内所有的参数都是局部变量，除非我们指定为全局变量，模块包在一个如下的函数中</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function (exports, require, module, __filename, __dirname) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>exports和module.exports本质是一样的，区别：exports是module.exports的一个引用，这就意味着我们直接修改exports会把引用修改掉，这就会导致无法访问到模块之前的 。</p>
-<p>exports通过点的形式来导出，modules.exports既可以通过点也可以通过直接赋值形式导出。</p>
-<p>module.exports公开了它指向的对象。 export公开了它指向的对象的属性。</p>
-<h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><p>凑合的包，记录需要的各种依赖关系，npm包是commonjs的一种实践。</p>
-<p>全局包的安装位置查看 <code>npm root -g</code></p>
-<h3 id="package-lock-json"><a href="#package-lock-json" class="headerlink" title="package-lock.json"></a>package-lock.json</h3><p>已经了解了package.json的作用，引用package-lock.json是不是是一种多余的，不然，package.jsont提供了一种特殊的版本记录，例如<code>〜0.13.0</code>，代表只更新补丁版本，即<code>0.13.1</code>可以，<code>0.14</code>是不可以的，虽然补丁版本的更新一般不做大量的更改，但是还是有可能导致版本不一致导致的问题，所以我们需要记录更加明确的版本记录，以保证在其他地方可以正常使用，pack-lock.json就诞生， 他是在版本<code>5</code>以后引入的。所以在<code>Git</code>中需要将这个文件提交。当运行 <code>npm update</code> 时，<code>package-lock.json</code> 文件中的依赖的版本会被更新。</p>
-<p>查看所有已安装的 npm 软件包（包括它们的依赖包）的最新版本，<code>npm list</code></p>
-<p><code>npm list -g</code> 也一样，但适用于全局安装的软件包。</p>
-<p>若要仅获取顶层的软件包（基本上就是告诉 npm 要安装并在 <code>package.json</code> 中列出的软件包），则运行 <code>npm list --depth=0</code></p>
-<p>可以使用@来安装指定版本：<code>npm install &lt;package&gt;@&lt;version&gt;</code></p>
-<p>列出软件包所有的以前的版本。 可以使用 <code>npm view &lt;package&gt; versions</code></p>
-<p>一般得，当发布新的版本时，开发者不仅仅是随心所欲地增加数字，还要遵循以下规则：</p>
-<ul>
-<li>当进行不兼容的 API 更改时，则升级主版本。</li>
-<li>当以向后兼容的方式添加功能时，则升级次版本。</li>
-<li>当进行向后兼容的缺陷修复时，则升级补丁版本。</li>
-</ul>
-<h3 id="npx"><a href="#npx" class="headerlink" title="npx"></a>npx</h3><p><code>npx</code> 是一个非常强大的命令，从 <strong>npm</strong> 的 5.2 版本（发布于 2017 年 7 月）开始可用。<code>npx</code> 可以运行使用 Node.js 构建并通过 npm 仓库发布的代码。·</p>
-<h3 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h3><h4 id="入队函数执行"><a href="#入队函数执行" class="headerlink" title="入队函数执行"></a>入队函数执行</h4><p>学习一个列子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> bar = <span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&#x27;bar&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> baz = <span class="function">() =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&#x27;baz&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> foo = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;foo&#x27;</span>)</span><br><span class="line">  <span class="built_in">setTimeout</span>(bar, <span class="number">0</span>)</span><br><span class="line">  baz()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo()</span><br></pre></td></tr></table></figure>
-
-<p>分析一下执行顺序，我看到settimeout的延迟时间是0，我自己分析它要比下面baz函数先执行，这样想是吧对的，因为实际上，setTimeout中的代码会放在堆栈中，主线程不会停止执行，是继续执行下面的baz函数之后会检查堆栈中的代码，下面是node给执行顺序的分析。</p>
-<p><img src="https://raw.githubusercontent.com/HHG66/picgo/master/img/%E6%89%A7%E8%A1%8C%E5%A0%86%E6%A0%88.png" alt="调用堆栈的第二个示例"></p>
-<h4 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h4><p>电子印章改造</p>
-<p>印章查询</p>
-<p>印章管理</p>
-<p>印章查验</p>
-<p>后台:</p>
-<p>印章管理</p>
-<p>印章日志</p>
-<p>周期开始：4月开始—6月底。</p>
-<p>第一版：原型图</p>
-<p>绩效：</p>
-
+        <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2>
+        
       
 
       
@@ -919,6 +762,71 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2022/03/25/node%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-GO学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/16/GO%E5%AD%A6%E4%B9%A0/">GO学习</a>
+    </h1>
+  
+
+        
+        <a href="/2022/03/16/GO%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2022-03-16T14:38:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-16</time>
+	  
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/03/16/GO%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
         </p>
       
 
@@ -1052,6 +960,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">UI</a>
               </li>
              
@@ -1061,10 +973,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">图床</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1096,11 +1004,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图表</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">图表</a>
               </li>
              
               <li class="article-tag-list-item">

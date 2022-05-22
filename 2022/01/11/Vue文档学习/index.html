@@ -11,15 +11,15 @@
             韩的博客
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="指令1234567891011121314151617181920&lt;body&gt;  &lt;div id&#x3D;&quot;app&quot;&gt;    &lt;a v-on:[eventName]&#x3D;&quot;doSomething&quot; href&#x3D;&quot;#&quot;&gt;一个a标签&lt;&#x2F;a&gt;  &lt;&#x2F;div&gt;  &lt;script src&#x3D;&amp;quo">
+        <meta name="description" content="接触vue一段时间，学习记录官方文档">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue文档学习">
 <meta property="og:url" content="http://example.com/2022/01/11/Vue%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="指令1234567891011121314151617181920&lt;body&gt;  &lt;div id&#x3D;&quot;app&quot;&gt;    &lt;a v-on:[eventName]&#x3D;&quot;doSomething&quot; href&#x3D;&quot;#&quot;&gt;一个a标签&lt;&#x2F;a&gt;  &lt;&#x2F;div&gt;  &lt;script src&#x3D;&amp;quo">
+<meta property="og:description" content="接触vue一段时间，学习记录官方文档">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-11T01:24:43.000Z">
-<meta property="article:modified_time" content="2022-04-23T01:48:42.000Z">
+<meta property="article:modified_time" content="2022-05-22T04:02:34.080Z">
 <meta property="article:author" content="Han Hongguang">
 <meta name="twitter:card" content="summary">
             
@@ -179,7 +179,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;a v-on:[eventName]=&quot;doSomething&quot; href=&quot;#&quot;&gt;一个a标签&lt;/a&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var app = new Vue(&#123;</span><br><span class="line">      el: &quot;#app&quot;,</span><br><span class="line">      data: &#123;</span><br><span class="line">        eventName: &quot;click&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        doSomething: function () &#123;</span><br><span class="line">          alert(&#x27;1&#x27;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+        <p>接触vue一段时间，学习记录官方文档</p>
+<span id="more"></span>
+
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;a v-on:[eventName]=&quot;doSomething&quot; href=&quot;#&quot;&gt;一个a标签&lt;/a&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var app = new Vue(&#123;</span><br><span class="line">      el: &quot;#app&quot;,</span><br><span class="line">      data: &#123;</span><br><span class="line">        eventName: &quot;click&quot;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        doSomething: function () &#123;</span><br><span class="line">          alert(&#x27;1&#x27;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
 <p>上面的案例中，有几点要注意，官方文档的事件名称是小写驼峰法，而实际上我是使用小写驼峰法会出现报错。第二个事件名称必须是字符串。第三，不可以使用箭头函数</p>
 <h2 id="计算属性和侦听器"><a href="#计算属性和侦听器" class="headerlink" title="计算属性和侦听器"></a>计算属性和侦听器</h2><h3 id="计算属性缓存-vs-方法"><a href="#计算属性缓存-vs-方法" class="headerlink" title="计算属性缓存 vs 方法"></a>计算属性缓存 vs 方法</h3><p>在模板引擎中可以写js 表达式，但是模板引擎的使用初衷是简单的运算，如果大量使用，会造成逻辑混乱和不易维护的问题，官方提供计算属性的方法让我们去使用。</p>
@@ -438,6 +441,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">UI</a>
               </li>
              
@@ -447,10 +454,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">图床</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -482,11 +485,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图表</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">图表</a>
               </li>
              
               <li class="article-tag-list-item">
