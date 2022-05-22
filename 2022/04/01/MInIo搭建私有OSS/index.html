@@ -11,15 +11,15 @@
             韩的博客
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="d  d 腾讯云服务器中的usr–local–MinIo文件夹下面下载安装了MinIo，输入下面的命令可以启动服务，主要这里有坑，不指定后面的端口是没办法访问的项目，当然ip也需要指定。 1.&#x2F;minio server &#x2F;minio&#x2F;data --address&#x3D;0.0.0.0:9000 --console-address &quot;0.0.0.0:9001&quot;  默认初始化账号密码：m">
+        <meta name="description" content="腾讯云服务器中的usr–local–MinIo文件夹下面下载安装了MinIo，输入下面的命令可以启动服务，主要这里有坑，不指定后面的端口是没办法访问的项目，当然ip也需要指定。 1.&#x2F;minio server &#x2F;minio&#x2F;data --address&#x3D;0.0.0.0:9000 --console-address &quot;0.0.0.0:9001&quot;  默认初始化账号密码：minioa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MInIo搭建私有OSS">
 <meta property="og:url" content="http://example.com/2022/04/01/MInIo%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89OSS/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="d  d 腾讯云服务器中的usr–local–MinIo文件夹下面下载安装了MinIo，输入下面的命令可以启动服务，主要这里有坑，不指定后面的端口是没办法访问的项目，当然ip也需要指定。 1.&#x2F;minio server &#x2F;minio&#x2F;data --address&#x3D;0.0.0.0:9000 --console-address &quot;0.0.0.0:9001&quot;  默认初始化账号密码：m">
+<meta property="og:description" content="腾讯云服务器中的usr–local–MinIo文件夹下面下载安装了MinIo，输入下面的命令可以启动服务，主要这里有坑，不指定后面的端口是没办法访问的项目，当然ip也需要指定。 1.&#x2F;minio server &#x2F;minio&#x2F;data --address&#x3D;0.0.0.0:9000 --console-address &quot;0.0.0.0:9001&quot;  默认初始化账号密码：minioa">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-01T11:31:47.000Z">
-<meta property="article:modified_time" content="2022-04-23T01:48:42.000Z">
+<meta property="article:modified_time" content="2022-05-22T02:16:02.164Z">
 <meta property="article:author" content="Han Hongguang">
 <meta name="twitter:card" content="summary">
             
@@ -179,21 +179,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>d </p>
-<p>d</p>
-<p>腾讯云服务器中的usr–local–MinIo文件夹下面下载安装了MinIo，输入下面的命令可以启动服务，主要这里有坑，不指定后面的端口是没办法访问的项目，当然ip也需要指定。</p>
+        <p>腾讯云服务器中的usr–local–MinIo文件夹下面下载安装了MinIo，输入下面的命令可以启动服务，主要这里有坑，不指定后面的端口是没办法访问的项目，当然ip也需要指定。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./minio server /minio/data --address=0.0.0.0:9000 --console-address &quot;0.0.0.0:9001&quot;</span><br></pre></td></tr></table></figure>
 
 <p>默认初始化账号密码：minioadmin</p>
 <p>查看端口任务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nap|grep 7779</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -nap|grep 7779</span><br><span class="line">//或者</span><br><span class="line">lsof -i:9000</span><br></pre></td></tr></table></figure>
 
 <p>查看服务指定服务名</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> ps -ef|grep &lt;服务名&gt;</span><br><span class="line">ps -ef|grep minio  </span><br></pre></td></tr></table></figure>
 
-<p>指定日志和ip，以及端口启动</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ./minio server /minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br></pre></td></tr></table></figure>
+<p>指定日志和ip，以及端口启动：</p>
+<blockquote>
+<p>注意，腾讯云数据挂载点和minio安装路径不在同一路径</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//一个示例</span><br><span class="line">nohup ./minio server /minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br><span class="line">//实际使用</span><br><span class="line">nohup ./minio server /Data/Minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br></pre></td></tr></table></figure>
 
+<p>如何启动成功，会在新的一行中显示启动的端口。</p>
 <p>访问文件，通过<code>IP:9000/桶的名称/文件名称</code>，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://49.234.54.90:9000/han/%E9%87%91%E8%9E%8D%E5%AD%A6.png</span><br></pre></td></tr></table></figure>
 
@@ -206,8 +208,7 @@
 <blockquote>
 <p>注意：腾讯云服务器硬盘初始化挂载成功了但是没有正常开始使用，找客服重新挂载了，但是导致之前的Minio数据在系统盘中，而且后续存储大小不够需要重新将数据目录指定为挂载硬盘中。</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ./minio server /Data/Minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
       
 
@@ -470,6 +471,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
@@ -522,10 +531,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">对象</a>
               </li>
              
@@ -535,6 +540,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">规范</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">

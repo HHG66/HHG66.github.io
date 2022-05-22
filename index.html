@@ -155,20 +155,67 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-ceshi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-js中this指向" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/05/21/js%E4%B8%ADthis%E6%8C%87%E5%90%91/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-React基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/05/03/ceshi/">ceshi</a>
+      <a class="article-title" href="/2022/05/17/React%E5%9F%BA%E7%A1%80/">React基础</a>
     </h1>
   
 
         
-        <a href="/2022/05/03/ceshi/" class="archive-article-date">
-  	<time datetime="2022-05-03T11:41:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-03</time>
+        <a href="/2022/05/17/React%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+  	<time datetime="2022-05-17T11:22:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-17</time>
 	  
 </a>
 
@@ -177,10 +224,229 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>d</p>
-<p>d</p>
-<p>d</p>
-<p>d</p>
+        <h1 id="React基础"><a href="#React基础" class="headerlink" title="React基础"></a>React基础</h1><p>用于构建用户界面的js库，另一种解释是将数据渲染成html视图的开源js库。</p>
+<p>js开发的痛点：</p>
+<p>1、为什么学习：简化dom操作，提高操作效率</p>
+<p>2、大量的重新渲染</p>
+<p>3、复用率低</p>
+<p>react的特点：</p>
+<p>1、组件化开发，提高复用率，声明式编程</p>
+<p>2、能够开发移动端开发</p>
+<p>3、虚拟dom+diffing算法、减少大量dom操作</p>
+<h2 id="jsx"><a href="#jsx" class="headerlink" title="jsx"></a>jsx</h2><p>使用jsx来编写react。</p>
+<h3 id="helloReact"><a href="#helloReact" class="headerlink" title="helloReact"></a>helloReact</h3><p>创建一个html，引入核心库，dom库，以及babel。</p>
+<p>新建一个script标签，指定的babel翻译，指定是必须的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/babel&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>1、创建一个虚拟dom</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const VDOM = &lt;h1&gt;hello React&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、渲染虚拟dom,render是一个函数，第一个参数接收接收虚拟dom，第二个参数接收一个容器dom（真实的dom元素）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>重复调用render()，不可以追加渲染，最后一次调用render会覆盖之前渲染的结果。</p>
+</blockquote>
+<h3 id="两种创建虚拟dom的方式"><a href="#两种创建虚拟dom的方式" class="headerlink" title="两种创建虚拟dom的方式"></a>两种创建虚拟dom的方式</h3><p>js原生创建，或者jsx创建。</p>
+<p>实际上原生创建是很复杂的，所以js方式创建很少用。不做笔记，事实上，jsx方式创建dom其实是会翻译成原生js的创建。</p>
+<p>jsx是原生创建js的语法糖。</p>
+<h3 id="虚拟dom和真实dom"><a href="#虚拟dom和真实dom" class="headerlink" title="虚拟dom和真实dom"></a>虚拟dom和真实dom</h3><p>虚拟dom是什么：</p>
+<h2 id="jsx语法规则"><a href="#jsx语法规则" class="headerlink" title="jsx语法规则"></a>jsx语法规则</h2><p>jsx全称：</p>
+<p>xml是什么：</p>
+<h3 id="规则："><a href="#规则：" class="headerlink" title="规则："></a>规则：</h3><p>jsx和实际dom写法的区别：不包含引号。</p>
+<p>包含<strong>表达式</strong>写法：</p>
+<blockquote>
+<p>区分什么是js代码和什么是js表达式</p>
+</blockquote>
+<p>类名如何写：</p>
+<p>内联样式写法：</p>
+<p>根元素规则：</p>
+<p>标签规则：</p>
+<p>标签首字母：大小写的区别</p>
+<h3 id="组件与模块"><a href="#组件与模块" class="headerlink" title="组件与模块"></a>组件与模块</h3><p>什么是组件：</p>
+<p>什么是模块：</p>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>函数式组件：</p>
+<blockquote>
+<p>类式组件开发的注意点</p>
+</blockquote>
+<p>分析执行过程：</p>
+<p>类式组件：</p>
+<blockquote>
+<p>类式组件开发的注意点</p>
+</blockquote>
+<p>分析执行过程：</p>
+<blockquote>
+<p>区别函数式和类式组件区别</p>
+</blockquote>
+<h3 id="简单组件和复杂组件"><a href="#简单组件和复杂组件" class="headerlink" title="简单组件和复杂组件"></a>简单组件和复杂组件</h3><h3 id="组件属性"><a href="#组件属性" class="headerlink" title="组件属性"></a>组件属性</h3><p><strong>组件状态：</strong>state</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/05/17/React%E5%9F%BA%E7%A1%80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-排序算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">排序算法</a>
+    </h1>
+  
+
+        
+        <a href="/2022/05/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2022-05-10T00:39:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-10</time>
+	  
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>冒泡排序：是一种最简单直观的排序算法。相邻两两比较，直到排序完成。</p>
+<p>所以如何将这种算法实际写出来，需要明确几点，从什么地方两两比较，比较的次数如何确定。</p>
+<p>下面是根据冒泡排序的算法思路和提供标准程序自己写的，可以看到的下面的冒泡排序有几点是不对的，第一个虽然我们可以实现排序，但是我们比较次数是固定的，没有考虑到每一次排序完成后，意味着下一次两两比较的次数都会减少一次，这样对于大量的数据排序能够给减少排序时间和负担。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> arrLength=arr.length</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>,i&lt;arrLength,i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>,j&lt;arrLength,j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">				<span class="keyword">let</span> temp=arr[j]</span><br><span class="line">				arr[j]=arr[j+<span class="number">1</span>]</span><br><span class="line">				arr[j+<span class="number">1</span>]=temp</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>标准冒泡算法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> arrLength = arr.length</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arrLength - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; arrLength - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = arr[j]</span><br><span class="line">        arr[j] = arr[j + <span class="number">1</span>]</span><br><span class="line">        arr[j + <span class="number">1</span>] = temp</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/05/10/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-个人网站" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/05/04/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">个人网站</a>
+    </h1>
+  
+
+        
+        <a href="/2022/05/04/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" class="archive-article-date">
+  	<time datetime="2022-05-04T09:31:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-04</time>
+	  
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一个可持续，可维护的项目一定要做好相关文档说明，不只是技术的说明，还有做好项目的需求，不至于以后打开项目而不知道当时处于什么想法去做的。同时，个人网站项目准备是一直维护和迭代的。所以 更要做好文档，未来考虑使用vue3和vite，以及ts去重构。</p>
+<p>目前项目还考虑最基础的功能，文字记录，使用markdown记录文章和学习笔记。</p>
+<p>目前实现有后台的功能，前台首页和文章路由展示文章。</p>
 
       
 
@@ -193,7 +459,113 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/05/03/ceshi/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/05/04/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mac启动mongoose数据库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>mac启动mongoose数据库</p>
+<p>使用终端工具进入mongoDB安装路径，<code>/usr/local/mongodb</code></p>
+<p>输入下面命令，指定数据路径、日志路径，fork指定后台运行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./bin/mongod --dbpath ./data --logpath ./mongo.log --fork;</span><br></pre></td></tr></table></figure>
+
+<p>不推介开机自动起动服务，使用的时候启动更好。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/05/03/mac%E5%90%AF%E5%8A%A8mongoose%E6%95%B0%E6%8D%AE%E5%BA%93/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-nginx相关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="配置正确，访问报403，"><a href="#配置正确，访问报403，" class="headerlink" title="配置正确，访问报403，"></a>配置正确，访问报403，</h1><p>nginx配置正确，访问报403错误，原因是用户不统一导致。解决方法：</p>
+<p>将配置文件中<code> #user  nobody;</code>修改为<code> user  root wheel;</code></p>
+<p><img src="https://raw.githubusercontent.com/HHG66/picgo/master/img/%E6%B5%8B%E8%AF%952.png" alt="image-20220508223704034"></p>
+<p>mac查看进程</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br><span class="line">ps -ef | grep &lt;进程名&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/30/nginx%E7%9B%B8%E5%85%B3/">展开全文 >></a>
         </p>
       
 
@@ -245,7 +617,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="ts学习"><a href="#ts学习" class="headerlink" title="ts学习"></a>ts学习</h1><p>tsc是ts 的编译命令，为了方便，ts提供了监听并且自动编译的命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tsc 文件名 —watch</span><br><span class="line">//简称</span><br><span class="line">tsc 文件名 -w</span><br></pre></td></tr></table></figure>
+
+<h2 id="初始化一个ts配置文件"><a href="#初始化一个ts配置文件" class="headerlink" title="初始化一个ts配置文件"></a>初始化一个ts配置文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc --init </span><br></pre></td></tr></table></figure>
+
+<p><code>tsc -w</code> 监听当前目录下的 tsconfig配置文件。</p>
+<h2 id="类型声明"><a href="#类型声明" class="headerlink" title="类型声明"></a>类型声明</h2><p>每一个变量都会初始化一个数据类型，当我们使用的时候只能按照初始化的数据类型使用，不然ts编译不通过。</p>
+<h2 id="类型推断"><a href="#类型推断" class="headerlink" title="类型推断"></a>类型推断</h2><p>当一个变量声明之后没有指定数据类型，而是直接使用，那么ts就认为变量的数据类型是使用值得数据类型。</p>
+<h2 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h2><h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="对象类型"><a href="#对象类型" class="headerlink" title="对象类型"></a>对象类型</h3><p>非原始类型,但是也属于ts的基本类型。</p>
+<h3 id="组合类型、"><a href="#组合类型、" class="headerlink" title="组合类型、"></a>组合类型、</h3><p>不是一个特定类型，而是几种基本类型的组合。</p>
+<h3 id="任意值"><a href="#任意值" class="headerlink" title="任意值"></a>任意值</h3><p>any</p>
+<h3 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h3><p>void</p>
+<h3 id="null和undefined"><a href="#null和undefined" class="headerlink" title="null和undefined"></a>null和undefined</h3><h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2>
       
 
       
@@ -376,21 +760,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>d </p>
-<p>d</p>
-<p>腾讯云服务器中的usr–local–MinIo文件夹下面下载安装了MinIo，输入下面的命令可以启动服务，主要这里有坑，不指定后面的端口是没办法访问的项目，当然ip也需要指定。</p>
+        <p>腾讯云服务器中的usr–local–MinIo文件夹下面下载安装了MinIo，输入下面的命令可以启动服务，主要这里有坑，不指定后面的端口是没办法访问的项目，当然ip也需要指定。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./minio server /minio/data --address=0.0.0.0:9000 --console-address &quot;0.0.0.0:9001&quot;</span><br></pre></td></tr></table></figure>
 
 <p>默认初始化账号密码：minioadmin</p>
 <p>查看端口任务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nap|grep 7779</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -nap|grep 7779</span><br><span class="line">//或者</span><br><span class="line">lsof -i:9000</span><br></pre></td></tr></table></figure>
 
 <p>查看服务指定服务名</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> ps -ef|grep &lt;服务名&gt;</span><br><span class="line">ps -ef|grep minio  </span><br></pre></td></tr></table></figure>
 
-<p>指定日志和ip，以及端口启动</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ./minio server /minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br></pre></td></tr></table></figure>
+<p>指定日志和ip，以及端口启动：</p>
+<blockquote>
+<p>注意，腾讯云数据挂载点和minio安装路径不在同一路径</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//一个示例</span><br><span class="line">nohup ./minio server /minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br><span class="line">//实际使用</span><br><span class="line">nohup ./minio server /Data/Minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br></pre></td></tr></table></figure>
 
+<p>如何启动成功，会在新的一行中显示启动的端口。</p>
 <p>访问文件，通过<code>IP:9000/桶的名称/文件名称</code>，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://49.234.54.90:9000/han/%E9%87%91%E8%9E%8D%E5%AD%A6.png</span><br></pre></td></tr></table></figure>
 
@@ -403,8 +789,7 @@
 <blockquote>
 <p>注意：腾讯云服务器硬盘初始化挂载成功了但是没有正常开始使用，找客服重新挂载了，但是导致之前的Minio数据在系统盘中，而且后续存储大小不够需要重新将数据目录指定为挂载硬盘中。</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ./minio server /Data/Minio/data  --address=&quot;0.0.0.0:9000&quot; --console-address &quot;0.0.0.0:9001&quot;  &gt;    ./minlog/minio.log 2&gt;&amp;1  &amp; </span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
       
 
@@ -563,500 +948,6 @@
 
 
   
-    <article id="post-GO学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/16/GO%E5%AD%A6%E4%B9%A0/">GO学习</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/16/GO%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2022-03-16T14:38:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-16</time>
-	  
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>一般一个包对应就是一个文件夹，一个文件夹下面有很多的源文件，源文件可以是一个包下的一个功能或者封装的函数。</p>
-<p>go中调用函数的方式是：引入包，包名.函数名，具体以后还会使用</p>
-<h2 id="dos常用命令"><a href="#dos常用命令" class="headerlink" title="dos常用命令"></a>dos常用命令</h2><p>dos：磁盘操作系统，原本是pc的直接操作系统，后集成在windows中。</p>
-<h2 id="Go的特点"><a href="#Go的特点" class="headerlink" title="Go的特点"></a>Go的特点</h2><p>静态语言能够在编译中发现大部分的问题，部署简单，语言层面支持高并发，强大的标准库支持，高效的GC垃圾回收。</p>
-<p>简单易学只有25个关键字，有面向对象特性。</p>
-<p>后面加不加分号都可以，一般推荐不加分号。</p>
-<h2 id="变量声明方式"><a href="#变量声明方式" class="headerlink" title="变量声明方式"></a>变量声明方式</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/16/GO%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-学习方法总结回顾" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/05/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93%E5%9B%9E%E9%A1%BE/">学习方法总结回顾</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/05/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93%E5%9B%9E%E9%A1%BE/" class="archive-article-date">
-  	<time datetime="2022-02-05T06:01:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-05</time>
-	  
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>回顾这十几年的学习，学习一直都是枯燥无聊的，成绩也是平常，一直没有按照一些学习方法贯彻执行，这里记录一些方法，尝试使用并且使其成为习惯。</p>
-<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>我们坚持学习都是为了未来能够达到一定的目标，学生时代中成绩能够前进几名，或者的考试第一，工作时能够提升工资，或者学习某一门技术，再例如埃隆马斯克的登陆火星等等，都是一个目标的。</p>
-<p>上面提到的成绩也好，还是火星登陆，都是目标得一种，当然他们之间也有不同，就是目标的实现难度，自然根据难度就有实现时间长短分别，长期目标和短期目标。</p>
-<p>一般我们需要确定短期和长期的目标，根据经验，短期目标要简单和可执行，而长期目标需模糊一些，因为短期目标总是延期或者无法实现，而长期目标又会发生改变。当确定我们想要实现的目标，我们就需要去完成它。</p>
-<h2 id="拆分目标法"><a href="#拆分目标法" class="headerlink" title="拆分目标法"></a>拆分目标法</h2><p>​    拆分目标法：将一个阶段任务拆分成具体的小目标，实现每一个小目标从而实现阶段目标。</p>
-<p>这个方法很早就知道但是很少能实际使用起来解决一些问题，这些问题可以是未来想去实现得计划，或者当前遇到得问题。将一个目标拆分成一天周或者一周这样的阶段任务，逐个完成，所以一个目标完成取决于如何能<strong>正确拆分</strong>目标和<strong>合理的安排时间</strong>完成。</p>
-<p>​    人们总是高估一年能做到的事情，但是总是低估10年能做到的事情。所以一个难以实现的目标在未来是可能的。</p>
-<p>​    当拆分一个目标后，我需要完成每一个小目标，而小目标的实现也并不一定是可以执行的具体步骤，因为我们可能没有掌握完成小目标的专业知识，所以我们需要去学习完成目标的知识。如何能高效学习知识并且运用，使用下面的方法。</p>
-<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><p>在过程中学习方法并没有先后之分，例如下面的思维导图方法和费曼学习方法，我们既可以先进行导图的梳理，在进行具体的学习，在学习通史或者和时间关联性强的尤为明显。同时使用费曼学习的方法中返回来从新总结补充导图也很重要。</p>
-<h2 id="思维导图学习法"><a href="#思维导图学习法" class="headerlink" title="思维导图学习法"></a>思维导图学习法</h2><p>能够结构化了解和加深记忆的学习方法。</p>
-<h2 id="费曼学习法"><a href="#费曼学习法" class="headerlink" title="费曼学习法"></a>费曼学习法</h2><p>公认的最高效的学习方法，以教促学，具体的步骤：</p>
-<p>第一步：获取知识（某概念），理解你所要学习的材料的内容。</p>
-<p>第二步：讲解/复述你所获得的主要内容。</p>
-<p>第三步：用你自己的方式以潜意识的形式再次复述你所学到的知识。</p>
-<p>第四步：这一步是一个可循环过程：不满意——纠错反馈；满意——尝试运用更简单精炼的语言概括。再用你所学到的知识解决实际问题，加以运用。</p>
-<p>第五步：反思。反思你在思考的时候在哪里卡了壳，着重这个地方，再次理解。这个过程至关重要！</p>
-<p>第六步：检验，通过不断的进行实践检验才能巩固你对于该知识点的理解。</p>
-<h2 id="艾宾浩斯遗忘曲线"><a href="#艾宾浩斯遗忘曲线" class="headerlink" title="艾宾浩斯遗忘曲线"></a>艾宾浩斯遗忘曲线</h2><p>我是平常人类， 遗忘是正常的现象，重视遗忘的，定期复习知识。</p>
-<p><img src="https://raw.githubusercontent.com/HHG66/picgo/master/img/%E8%89%BE%E5%AE%BE%E6%B5%A9%E6%96%AF%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF.png" alt="image-20220214143720568"></p>
-<h2 id="有限精力原则"><a href="#有限精力原则" class="headerlink" title="有限精力原则"></a>有限精力原则</h2><p>精力并非无限，将最大的精力放在学习，并且要保证充足的休息。</p>
-<h1 id="目标检测"><a href="#目标检测" class="headerlink" title="目标检测"></a>目标检测</h1><p>如何证明我们已经完成我们的小目标，一定需要检测来检查我们学习的成果，他可以是考试，也可以的是回顾，重点是准确的检测和目标的差距，并且循环上面的学习步骤。</p>
-<h1 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h1><p><strong>目标：</strong>目标我想学习编程，编写一套社区管理系统，有后台管理系统。</p>
-<p><strong>拆分目标：</strong>1、使用什么编程语言，以及需要其他什么的知识。2、具体的功能。3、时间多久。</p>
-<p>注意拆分目标的原则，可以实现和具体时间。</p>
-<p>第一点使用go语言写，但是不会go语言就需要去学习go语言，能够使用go上手开发需要多久，有语言基础需要最低1个月。熟悉vue开发时间为1周，同时系统需要数据库，所以学习数据库也需要一周时间。redis学习时间一周。</p>
-<p>具体的功能：制作了需求文档，按照那个开发，时间一个月。</p>
-<p>这样时间大概为3个月，但是计划总是理想情况，我们需要将时间做一定延长，这里延长到4个月，就是5月底完成项目开发。</p>
-<blockquote>
-<p>注意这个是正常计划实际需要灵活调整，不要固执的认定计划！</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/05/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93%E5%9B%9E%E9%A1%BE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用nginxWebUI配置ngixn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/02/%E4%BD%BF%E7%94%A8nginxWebUI%E9%85%8D%E7%BD%AEngixn/">使用nginxWebUI配置ngixn</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/02/%E4%BD%BF%E7%94%A8nginxWebUI%E9%85%8D%E7%BD%AEngixn/" class="archive-article-date">
-  	<time datetime="2022-02-01T17:53:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-02</time>
-	  
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>的</p>
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>nginxWebUI是一款图形化管理nginx配置得工具, 可以使用网页来快速配置nginx的各项功能, 包括http协议转发, tcp协议转发, 反向代理, 负载均衡, 静态html服务器, ssl证书自动申请、续签、配置等, 配置好后可一建生成nginx.conf文件, 同时可控制nginx使用此文件进行启动与重载, 完成对nginx的图形化控制闭环.</p>
-<h1 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h1><p>下载的是发布版本jar包，只需要启动jar就可以使用了，当然为了自动启动和后台运行使用了工具启动。</p>
-<p>使用了winsw工具来启动jar包，下载winsw可执行exe文件，这个exe文件名称可以随便修改，这里修改成了nginxWebUI.exe保持了和jar包名称一致。</p>
-<p>winsw文件需要和nginxWebUI的jar包放在一起，同时新建一个nginxWebUI.xml的文件来配置winsw，配置如下。</p>
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;service&gt;</span><br><span class="line"></span><br><span class="line">     &lt;id&gt;test&lt;/id&gt;</span><br><span class="line"></span><br><span class="line">     &lt;name&gt; nginxWebUI &lt;/name&gt;</span><br><span class="line"></span><br><span class="line">     &lt;description&gt;This is test service.&lt;/description&gt;</span><br><span class="line"></span><br><span class="line">      &lt;env name=&quot;JENKINS_HOME&quot; value=&quot;%BASE%&quot;/&gt;</span><br><span class="line"></span><br><span class="line">     &lt;executable&gt;java&lt;/executable&gt;</span><br><span class="line"></span><br><span class="line">    &lt;arguments&gt;-jar  -Dfile.encoding=UTF-8 D:\works\gongju\nginxWebUI.jar --server.port=8099&lt;/arguments&gt;</span><br><span class="line"> </span><br><span class="line">     &lt;startmode&gt;Automatic&lt;/startmode&gt;</span><br><span class="line"></span><br><span class="line">     &lt;logpath&gt;%BASE%\log&lt;/logpath&gt;</span><br><span class="line"></span><br><span class="line">     &lt;logmode&gt;rotate&lt;/logmode&gt;</span><br><span class="line"></span><br><span class="line"> &lt;/service&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">需要注意的nginxWebUI项目需要指定编码，不指定编码启动后项目会出现乱码的问题。</span><br></pre></td></tr></table></figure>
-
-<p>安装相关文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginxWebUI.exe install</span><br></pre></td></tr></table></figure>
-
-<p>启动文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginxWebUI.exe start</span><br></pre></td></tr></table></figure>
-
-<p>停止文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginxWebUI.exe stop</span><br></pre></td></tr></table></figure>
-
-<p>最基本的使用就是这样，这样就可以在游览器中查看项目来快速配置ngxin配置项了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/02/%E4%BD%BF%E7%94%A8nginxWebUI%E9%85%8D%E7%BD%AEngixn/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-开发常用的快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/31/%E5%BC%80%E5%8F%91%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/">开发常用的快捷键</a>
-    </h1>
-  
-
-        
-        <a href="/2022/01/31/%E5%BC%80%E5%8F%91%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
-  	<time datetime="2022-01-31T12:21:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-31</time>
-	  
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="开发中常用的快捷按键"><a href="#开发中常用的快捷按键" class="headerlink" title="开发中常用的快捷按键"></a>开发中常用的快捷按键</h1><p>除了最基本的按键，这里记录的使用一些新学习的快捷按键，提高开发效率。</p>
-<h2 id="window系统快捷按键："><a href="#window系统快捷按键：" class="headerlink" title="window系统快捷按键："></a>window系统快捷按键：</h2><p><strong>1、</strong>快速切换应用：win+数字键，能够切换当前系统桌面的窗口。不足点是如果当前窗口是多个组合窗口切换不方便。</p>
-<h2 id="chrome-游览器按键"><a href="#chrome-游览器按键" class="headerlink" title="chrome 游览器按键"></a>chrome 游览器按键</h2><p>ctrl+数字键：却换对应的页签。</p>
-<p>crtl+pageup：切换到上一个页签，82键的键盘需要使用到fn功能键配合。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/01/31/%E5%BC%80%E5%8F%91%E5%B8%B8%E7%94%A8%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-计算机组成原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a>
-    </h1>
-  
-
-        
-        <a href="/2022/01/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2022-01-31T04:08:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-31</time>
-	  
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>22年春节放假期间补一补计算机基础相关的东西，先学习计算机组成原理。</p>
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>计算机系统=硬件+软件</p>
-<p>软件=系统软件+应用软件</p>
-<h2 id="计算机的发展"><a href="#计算机的发展" class="headerlink" title="计算机的发展"></a>计算机的发展</h2><p>第一台电子计算机诞生：冯诺依曼</p>
-<p>电子计算机发展阶段：四个阶段以及每个阶段电子计算机的特点。（重点）</p>
-<p>威廉·肖克利的贡献</p>
-<p>摩尔定律是什么</p>
-<p>软件发展：机器语言、汇编语言、高级语言</p>
-<p>计算机未来的发展方向：什么是两极分化的发展方向。</p>
-<h2 id="计算机硬件组成"><a href="#计算机硬件组成" class="headerlink" title="计算机硬件组成"></a>计算机硬件组成</h2><p>冯诺依曼机：提出存储程序的方法实现自动执行程序，解决当时人工执行的难题。</p>
-<p>冯诺依曼机的结构：输入设备、存储器、运算器、控制器、输出设备，只要以运算器为中心。</p>
-<p>特点：指令、操作码、地址码、</p>
-<p>现代计算器的结构：主要围绕存储器为中心、</p>
-<p>现代计算机的cpu=运算器+控制器</p>
-<p>主机=cpu+主存储器，注意这里的主机不是指pc的主机。</p>
-<p>主要区别现代计算器和冯诺依曼机的区别。</p>
-<p>主存储器=存储体+MAR（存储地址寄存器）+MDR（存储数据寄存器）</p>
-<p> 存储单元：</p>
-<p>存储字：</p>
-<p>存储字长：</p>
-<p>存储元：</p>
-<p>运算器的组成：ACC（累加器）+MQ（乘商寄存器）+ALU（算数逻辑单元）+X（通用寄存器）</p>
-<p>控制器的组成：CU（控制单元）+IR（指令寄存器）+PC（程序计数器）</p>
-<p>取指的阶段：</p>
-<p>运算阶段：</p>
-<p>简述一个指令的执行过程。</p>
-<p>需要注意的是，现在的计算机会把MAR和MDR集成在cpu提高运算效率。</p>
-<h2 id="计算机的层次结构"><a href="#计算机的层次结构" class="headerlink" title="计算机的层次结构"></a>计算机的层次结构</h2><p>计算机的层次结构：计算机只能识别机器语言，机器语言就是二进制的指令，而指定在计算机中一般不是可以一次性执行完成的，需要cpu去执行话，还需要执行过程把指令再拆分成微指令，微指令是cpu可以直接执行的指令。</p>
-<p>一般把实现机器语言以及微指令程序的部分称为硬件部分。之所以这样讲是因为两者需要底层硬件的支持才能实现，除此之外的其他的部分称为软件，他们的实现不再直接依靠底层硬件，而是机器程序和汇编程序。</p>
-<p>汇编语言：</p>
-<p>高级语言：</p>
-<p>编译程序：</p>
-<p>解释程序：</p>
-<p>编译程序和解释程序的区别：</p>
-<h2 id="计算机性能指标"><a href="#计算机性能指标" class="headerlink" title="计算机性能指标"></a>计算机性能指标</h2><p><strong>存储器的性能指标：</strong>总容量=MRA*MDR</p>
-<p><strong>CPU的性能指标：</strong>主频：</p>
-<p>cpu时钟周期：</p>
-<p>一条指令的耗时：</p>
-<p>CPI：</p>
-<p>IPS：</p>
-<p>FLOPS：</p>
-<p>计算机的整体性能指标:数据通路带宽</p>
-<p>吞吐量：单位时间内处理的请求量，主要却决于主存的存取周期</p>
-<p>响应时间：</p>
-<p>基准程序：实际处理一段代码来综合评分，例如鲁大师</p>
-<h1 id="数据的表示和运算"><a href="#数据的表示和运算" class="headerlink" title="数据的表示和运算"></a>数据的表示和运算</h1><h2 id="进位计数制"><a href="#进位计数制" class="headerlink" title="进位计数制"></a>进位计数制</h2><p>常见进制数：</p>
-<p>常见进制数之间的相互转换： </p>
-<p>BCD码：二进制编码的十进制数</p>
-<p>8421码、余3码、2421码</p>
-<h3 id="字符和字符串的表示"><a href="#字符和字符串的表示" class="headerlink" title="字符和字符串的表示"></a>字符和字符串的表示</h3><p>ASCII码：</p>
-<p>可印刷字符和控制、通信字符</p>
-<p>奇偶校验码：</p>
-<p><strong>海明码：</strong>天才般的纠错设计。</p>
-<h3 id="循环冗余校验码"><a href="#循环冗余校验码" class="headerlink" title="循环冗余校验码"></a>循环冗余校验码</h3><p>循环冗余校验码（CRC码）：检测原理、</p>
-<h2 id="定点数和浮点数"><a href="#定点数和浮点数" class="headerlink" title="定点数和浮点数"></a>定点数和浮点数</h2><p>原码、反码、补码、移码的定义和计算。</p>
-<p>几种码的作用：</p>
-<p>使用加法实现一个减法的操作。</p>
-<h3 id="定点数的移位运算："><a href="#定点数的移位运算：" class="headerlink" title="定点数的移位运算："></a>定点数的移位运算：</h3><p>算数移位：</p>
-<p>逻辑移位：</p>
-<p>循环移位：</p>
-<h3 id="定点数加减运算"><a href="#定点数加减运算" class="headerlink" title="定点数加减运算"></a>定点数加减运算</h3><p>原码：加法、减法运算</p>
-<p>补码：</p>
-<p>溢出判断：</p>
-<p>符号拓展：</p>
-<p>模4补码：</p>
-<p>模2补码：</p>
-<h3 id="定点数乘法除法运算"><a href="#定点数乘法除法运算" class="headerlink" title="定点数乘法除法运算"></a>定点数乘法除法运算</h3><p>原码的乘法运算：</p>
-<p>补码的乘法运算：较难理解</p>
-<p>原码的除法运算：</p>
-<p>补码的除法运算：</p>
-<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><h3 id="数据的存储和排列"><a href="#数据的存储和排列" class="headerlink" title="数据的存储和排列"></a>数据的存储和排列</h3><p>大端存储、小端存储</p>
-<p>对齐存放、和不对其的存放方式：</p>
-<p>对齐存放、和不对其的存放方式的区别：</p>
-<h3 id="浮点数表示和运算"><a href="#浮点数表示和运算" class="headerlink" title="浮点数表示和运算"></a>浮点数表示和运算</h3><p>定点数可以表示的数字范围有限，同时不能一直扩展定点数的长度，所以必须引入可以标识更大范围的数据，这种数据表示就是浮点数</p>
-<p>浮点数尾数的规格化：</p>
-<p>阶码：</p>
-<p>尾数：</p>
-<h3 id="IEEE-754"><a href="#IEEE-754" class="headerlink" title="IEEE 754"></a>IEEE 754</h3><h3 id="浮点数的加减运算"><a href="#浮点数的加减运算" class="headerlink" title="浮点数的加减运算"></a>浮点数的加减运算</h3><h3 id="C语言强制类型转换"><a href="#C语言强制类型转换" class="headerlink" title="C语言强制类型转换"></a>C语言强制类型转换</h3><h2 id="算数逻辑单元"><a href="#算数逻辑单元" class="headerlink" title="算数逻辑单元"></a>算数逻辑单元</h2><h3 id="电路基本单元"><a href="#电路基本单元" class="headerlink" title="电路基本单元"></a>电路基本单元</h3><p>逻辑运算单元：ALU</p>
-<p>基本逻辑运算：与、或、非</p>
-<p>复合逻辑运算：与非、或非、异或</p>
-<p>加法器的电路实现以及实现优化：</p>
-<h1 id="存储系统设计"><a href="#存储系统设计" class="headerlink" title="存储系统设计"></a>存储系统设计</h1><p>主存储器简单模型：</p>
-<p>地址寄存器、数据寄存器、存储体、逻辑时序电路</p>
-<p>区分：kb和KB的区别，一个是速率的衡量一个是存储容量的衡量</p>
-<h3 id="半导体存储器RAM"><a href="#半导体存储器RAM" class="headerlink" title="半导体存储器RAM"></a>半导体存储器RAM</h3><h3 id="半导体存储器ROM"><a href="#半导体存储器ROM" class="headerlink" title="半导体存储器ROM"></a>半导体存储器ROM</h3><h3 id="CPU与主存的协同工作"><a href="#CPU与主存的协同工作" class="headerlink" title="CPU与主存的协同工作"></a>CPU与主存的协同工作</h3><h3 id="双口RAM和多模块存储器"><a href="#双口RAM和多模块存储器" class="headerlink" title="双口RAM和多模块存储器"></a>双口RAM和多模块存储器</h3><p>提高存储器的工作速度</p>
-<h3 id="高速缓冲存储器Cache"><a href="#高速缓冲存储器Cache" class="headerlink" title="高速缓冲存储器Cache"></a>高速缓冲存储器Cache</h3><p>cache和cpu协同工作是对操作系统透明的，操作系统无法感知和操作cpu对cache的工作。</p>
-<p>局部性原理</p>
-<p>cache的性能分析</p>
-<p>cache和CPU的地址映射</p>
-<p>替换算法：随机算法、先进先出算法、近期最少使用算法、最不常用使用算法</p>
-<p><img src="https://raw.githubusercontent.com/HHG66/picgo/master/img/chche%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.png" alt="image-20220303101033208"></p>
-<p>写策略：</p>
-<p>写回法：cache存储的是主存中数据地址，同时为了提高效率，不是直接写而是等chache存储体被换出后将改写的数据写回主存中。</p>
-<p>全写法：</p>
-<p>写分配法：和写回法的联系。</p>
-<h3 id="虚拟存储器"><a href="#虚拟存储器" class="headerlink" title="虚拟存储器"></a>虚拟存储器</h3><p>解决主存物理空间有限，不够的情况下的能够正常运行的一种层次化设计机制。</p>
-<p> 实页和虚页，代表是主存和虚存的地址固定大小集合。</p>
-<p>段式是长度不固定的地址集合。</p>
-<p>以及段页结合的虚拟存储器。</p>
-<p>重点要理解虚拟地址和实际地址的转化过程和处理过程。</p>
-<h3 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h3><p>二进制代码如果标识指令，指令是计算机可执行的最小的功能单元。</p>
-<p>指令集：指令的集合</p>
-<p>指令格式：操作码+地址码</p>
-<p>操作码和地址码的具体作用，</p>
-<p><strong>指令寻址</strong>：设计思路和原理。</p>
-<p><strong>数据寻址</strong>：常见的数据寻址方式有10种，堆栈寻址是相对不重要的数据寻址方式。</p>
-<h3 id="指令集的设计"><a href="#指令集的设计" class="headerlink" title="指令集的设计"></a>指令集的设计</h3><p>指令集设计有两种思路；CISC和RISC，分别是：复杂指令系统计算机，精简指令集计算机。</p>
-<h2 id="CPU中央处理器"><a href="#CPU中央处理器" class="headerlink" title="CPU中央处理器"></a>CPU中央处理器</h2><h3 id="功能与结构"><a href="#功能与结构" class="headerlink" title="功能与结构"></a>功能与结构</h3><p>功能：指令控制、操作控制、时间控制、数据加工、中断处理、</p>
-<p>CPU的基本机构：1、ALU、2、寄存器、3、CU、4、中断系统   </p>
-<p>运算器由主要有<code>算数逻辑单元</code>和<code>通用寄存器组</code>，以及暂存寄存器、累加寄存器、程序状态字寄存器和移位器，计数器组成。分析逻辑单元和寄存器之间的通信。</p>
-<p>控制器由程序计数器、指令寄存器、指令译码器、微操作信号发生器、时序系统、存储器地址寄存器、 存储器数据寄存器。</p>
-<p><img src="https://raw.githubusercontent.com/HHG66/picgo/master/img/CPU%E5%9F%BA%E6%9C%AC%E7%94%B5%E8%B7%AF.png" alt="image-20220411124404896"></p>
-<h3 id="指令周期的数据流"><a href="#指令周期的数据流" class="headerlink" title="指令周期的数据流"></a>指令周期的数据流</h3><p>指令周期：</p>
-<p>数据流：分析不同周期的执行过程。</p>
-<p>执行方案：单指令周期、多指令周期、流水线方案</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/01/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1173,6 +1064,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
@@ -1225,10 +1124,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">对象</a>
               </li>
              
@@ -1238,6 +1133,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">规范</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
